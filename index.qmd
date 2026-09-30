@@ -1,0 +1,19 @@
+---
+title: "Isaac Shilling"
+image: headshot.jpeg
+about:
+  template: jolla
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/isaacshilling06
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/isaac-shilling-251192386
+    - icon: inboxes
+      text: Contact
+      href: mailto:is018@uark.edu
+---
+
+I'm an Industrial Engineering and Operations Analytics student in the College of Engineering Honors program at the University of Arkansas. I aspire to be a consultant or go into technical sales. Im passionate about golf, coding, trading, and skiing. 
+---
