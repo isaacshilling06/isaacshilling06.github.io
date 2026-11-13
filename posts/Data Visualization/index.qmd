@@ -20,17 +20,17 @@ This project was completed as a team for INEG 21003 Data Visualization at the Un
 
 ## The Data Set
 
-Our data set comes from the U.S. Department of Transportation's Bureau of Transportation Statistics (BTS) Reporting Carrier On-Time Performance data. We pulled every scheduled departure from Northwest Arkansas National Airport (XNA) in January 2025, which came to 933 flights. Each row is one flight, and the columns include the flight date, the operating carrier code (for example MQ, OH, AA, and OO), the departure delay in minutes, the arrival delay at the destination in minutes, whether the flight was canceled, the flight distance in miles, and the air time in minutes.
+The data we used came from the U.S. Department of Transportation's Bureau of Transportation Statistics Reporting Carrier On-Time Performance data that we found online. We were able to pull every departure from January 2025 from XNA which was 933 flights total. Each row is one flight and we included columns that cover the flight date, the operating code, the departure delay, the arrival delay, whether the flight was canceled or not, the flight distance, and finally the actual air time.
 
-We pasted the data into an Excel workbook, gave the columns meaningful names, and cleaned it on a Flight Data sheet. Canceled flights do not have delay or air time values, so those blanks were left out of the calculations instead of being treated as zero. All of the summary tables and charts were built on a separate Plots sheet. Each of our four questions uses different columns of the data set.
+We pasted the data we got into excel and gave the columns meaningful names via the stuff that was in the original data and cleaned it with AI to make the flight data sheet. Canceled flights do not have delay or air time values so we just left them out of calculations instead of just treating them as 0's. All of the summary tables and charts we built are on a separate plots sheet. each of the 4 questions we asked make up their own column.
 
 ## Question 1: How did departure delays at XNA change over the month of January 2025?
 
-**Why it's interesting:** XNA is our home airport, and most of us fly out of it to get home for breaks. January brings winter weather to Northwest Arkansas, and we wanted to know whether delays built up steadily over the month or hit in sudden spikes on specific days.
+**Why it's interesting:** XNA is the closest big airport we have here in fay and those who fly out to get home over breaks most likely use XNA. Because January brings winter weather here we wanted to know whether or not delays built up steadily over the month or hit in sudden spikes on a specific few days.
 
-**How we used Excel:** Using the flight date and departure delay columns, the Plots sheet groups the 898 recorded departure delays by date and calculates the average delay for each day of January. Negative values mean flights left early. The daily averages showed that January 10 stood out, with 14 flights averaging 185 minutes late.
+**How we used Excel:** By using the flight date and departure delay columns we were able to plot sheet groups for the 898 recorded departure delays by their date and then calculate the average delay for every day in the month of January. We technically had some negative values which just means that some flights left early which we needed to account for. The daily averages showed that January 10 was a stand out day with 14 flights averaging 185 minutes late.
 
-**How we developed the visual:** Because the question is about change over clock time, we used a time-series line chart with the date on the horizontal axis and the daily average delay in minutes on the vertical axis. We kept one line color, labeled the axis with its units, and kept zero visible so early days read as below the line. The assertion headline states the main finding, the January 10 peak, and the supporting text adds that daily averages fluctuated rather than rising steadily.
+**How we developed the visual:** Because the question is about change over clock time we decided to use a time series line chart with the date on the x axis and the daily average delay in minutes on the y axis. We kept one line color and labeled the axis with the correct units as well as keeping zero visible so early days read clearly below the line and are easy to identify.
 
 ![](slides/Slide2.PNG)
 
@@ -46,20 +46,20 @@ We pasted the data into an Excel workbook, gave the columns meaningful names, an
 
 ## Question 3: How are arrival delays for flights leaving XNA distributed?
 
-**Why it's interesting:** An average can hide what a typical trip is like. We wanted to know whether most flights from XNA get to their destination on time, and how often a flight ends up extremely late, which matters for connections and rides at the other end.
+**Why it's interesting:** An average can hide what a typical trip actually looks like so we wanted to know whether most flights from XNA actually get to their destination on time as well as how often a flight ends up being extremely late. This part matters for connections and rides at the other airport.
 
-**How we used Excel:** Using the arrival delay column, we sorted the recorded arrival delays into 60-minute bins and counted how many flights fell in each bin. Missing arrival delays were left out, and empty bins and the largest delay were kept so the full range shows. Of the 897 recorded arrivals, 575 (64%) were early, and the longest delay was 1,810 minutes.
+**How we used Excel:** Using the arrival delay column we were able to sort the recorded arrival delays into 60 minute bins and then count how many flights fell in each of these bins. If we didn't have the arrival date information we just left it out and the largest delays were kept so the full range actually shows. Of the 897 recorded arrivals, 575 were early and the longest delay was an insane 1,810 minutes.
 
-**How we developed the visual:** Showing the distribution of one numerical variable called for a histogram. We removed the gaps between bars so the bins touch, labeled each bin by its midpoint (for example, -30 represents -60 to under 0 minutes), and labeled the vertical axis as the number of flights. The long right tail is the key takeaway, so the headline says most flights arrived early but a few ran hours late.
+**How we developed the visual:** Showing the distribution of one numerical variable is best done on a histogram (learned from stats class). So, we removed the gaps between bars so the bins are touching and then labeled each bin by its midpoint. Then we labeled the vertical axis as the number of flights to make this easy to read. The long right tail is the biggest takeaway here telling us most flights arrived early but a few ran many hours late.
 
 ![](slides/Slide4.PNG)
 
 ## Question 4: How is a flight's distance related to the time it spends in the air?
 
-**Why it's interesting:** XNA has nonstop flights to cities both close by and far away. We expected longer flights to take longer, but we wanted to see how strong that relationship really is, and how much flights covering the same distance vary.
+**Why it's interesting:** XNA has flights that go to both close and far cities all 24 hours of the day. We guessed that longer flights would take longer but we wanted to see how strong that relationship actually is and how much flights going the same distance vary in total time taken.
 
-**How we used Excel:** Using the distance and air time columns, the Plots sheet pairs distance in miles with air time in minutes for each of the 897 flights that had both values. We calculated the Pearson correlation coefficient from those same pairs and got r = 0.94, a strong positive relationship. Air time does not include taxiing.
+**How we used Excel:** Using the distance and air time columns the plots sheet is able to pair distance in miles with air time in minutes for all of the 897 flights that gave us both values. We then calculated the Pearson correlation coefficient from them and got r = 0.94 which means we have a strong positive relationship.
 
-**How we developed the visual:** Two numerical variables called for a scatter plot, with distance on the horizontal axis and air time on the vertical axis, both labeled with units. Each marker is one flight, so flights on the same route stack into vertical groups, which shows how much air time varies at a fixed distance. The supporting text includes the correlation coefficient so the headline's claim is backed by a number.
+**How we developed the visual:** Two variables like these call for a scatter plot where distance is on the x axis and air time is on the y axis both labeled with their units. Each marker is one specific flight, so flights that are on the same route get stacked into vertical groups which allows us to see the variance at a fixed distance. The supporting text we used includes the correlation coefficient so the headline's claim is backed by that number.
 
 ![](slides/Slide5.PNG)
