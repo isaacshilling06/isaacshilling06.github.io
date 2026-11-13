@@ -15,5 +15,4 @@ about:
       href: mailto:is018@uark.edu
 ---
 
-I'm an Industrial Engineering and Operations Analytics student in the College of Engineering Honors program at the University of Arkansas. I aspire to be a consultant or go into technical sales. Im passionate about golf, coding, trading, and skiing. 
----
+## I'm an Industrial Engineering and Operations Analytics student in the College of Engineering Honors program at the University of Arkansas. I aspire to be a consultant or go into technical sales. Im passionate about golf, coding, trading, and skiing.
